@@ -42,7 +42,7 @@ namespace Bypasser_Mhyprot2
             
             //not found
             Console.WriteLine("START GENSHIN IMPACT");
-			Console.ReadKey();
+	    Console.ReadKey();
         }
         
         private static void RandTitle()
