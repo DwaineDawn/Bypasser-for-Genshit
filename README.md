@@ -1,6 +1,14 @@
 # Bypasser-for-Genshit
 Bypass Mhyprot2 anti cheat
 
+🟥 Attention ! 🟥
+🐱‍👤- This Project is paused due to newest update
+
+✨- Mhyprot .
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 This is a genshin bypasser to bypass anti cheat -> Mhyprot2 to disable sending log to server 🐱‍👤
 Use it wisely :) ❤
 
