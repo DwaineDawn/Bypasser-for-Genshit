@@ -11,7 +11,10 @@ Bypass Mhyprot2 anti cheat
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-This is a genshin bypasser to bypass anti cheat -> Mhyprot2 to disable sending log to server 🐱‍👤
+This is a genshin bypasser to bypass anti cheat 
+
+
+-> Mhyprot2 to disable sending log to server 🐱‍👤
 Use it wisely :) ❤
 
 👨‍💻
