@@ -20,8 +20,8 @@ namespace Bypasser_Mhyprot2
     public class Program
     {
         [STAThread]
-		[DebuggerNonUserCode]
-		[GeneratedCode("PresentationBuildTasks", "1.0.0.0")]
+        [DebuggerNonUserCode]
+	[GeneratedCode("PresentationBuildTasks", "3.1.0.2")]
         
         public static void Main(string[] args)
         {
