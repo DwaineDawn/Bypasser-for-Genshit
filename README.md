@@ -52,17 +52,11 @@ Ways to use :
 ▶ Finnish
 
 
-
-
-🕶 credit to Desire.pro (FUCK#9803) 👍 
-
-💘 credit to Dwaine (Dwaine#0572) 👍
-
-
-
 Virustotal result ▶ https://www.virustotal.com/gui/file/43f7e5accacbe9d4a067910650f23f6b4d5e7820f784cfc5c6f57eb7bc4ca9b9?nocache=1
 
 ![image](https://user-images.githubusercontent.com/76231245/137600891-f98c5dcc-b4ee-4803-bc26-3b3af356893a.png)
 
 
 Have Fun ❤🐱‍👤
+
+💘 credit to Dwaine (Dwaine#0572) 👍
