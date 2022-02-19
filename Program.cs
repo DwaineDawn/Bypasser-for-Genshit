@@ -123,7 +123,7 @@ namespace Bypasser_Mhyprot2
 // 			Synchronize = 0x00100000
 //         }
         
-//         [DllImport("kernel32.dll", SetLastError = true)]
+//              [DllImport("kernel32.dll", SetLastError = true)]
 // 		private static extern IntPtr OpenProcess(ProcessAccessFlags processAccess, bool bInheritHandle, int processId);
 // 		[DllImport("kernel32.dll", SetLastError = true)]
 // 		[return: MarshalAs(UnmanagedType.Bool)]
