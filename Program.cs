@@ -76,9 +76,9 @@ namespace Bypasser_Mhyprot2
                 
                 if (File.Exists(Path.Combine(Path.GetTempPath(), "")) && new FileInfo(
                     Path.Combine(Path.GetTempPath(), "")).Length > 200L)
-				{
-					flag = true;
-				}
+		{
+		     flag = true;
+	        }
                 else
                 {
                     return 0;
@@ -95,12 +95,12 @@ namespace Bypasser_Mhyprot2
             catch (Exception arg)
             {
                 Console.WriteLine("Error! " + arg);
-				Console.ReadKey();
+	        Console.ReadKey();
             }
             catch (WebException)
             {
                 Console.WriteLine("No internet connection!");
-				Console.ReadKey();
+		Console.ReadKey();
             }
         }
         
