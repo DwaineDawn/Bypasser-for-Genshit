@@ -18,93 +18,12 @@ using System.Security.AccessControl;
 namespace Bypasser_Mhyprot2
 {
     public class Program
-    {
-        [STAThread]
-        [DebuggerNonUserCode]
-	[GeneratedCode("PresentationBuildTasks", "3.1.0.2")]
-        
+    {   
         public static void Main(string[] args)
         {
-            
-            RandTitle();
-            
-            //Global 
-            if (Process.GetProcessByName("GenshinImpact").Lenght != 0)
-            {
-                Console.WriteLine("PROCESS FOUND");
-            }
-            
-            //Chinese
-            if (Process.GetProcessByName("GenshinImpact").Lenght != 0)
-            {
-                Console.WriteLine("PROCESS FOUND");
-            }
-            
-            //not found
-            Console.WriteLine("START GENSHIN IMPACT");
-	    Console.ReadKey();
+           Console.WriteLine("Project Paused");
+	   Console.ReadKey();
         }
-        
-        private static void RandTitle()
-        {
-            Console.Title = "";
-            Random rnd = new Random();
-            Char[] pwdChars = new Char[62]
-            {   'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
-            };
-            for (int i = 20; i < 75; i++)
-            {
-                Console.Title += pwdChars[rnd.Next(0, 35)];
-            }
-            Thread.Sleep(10);
-        }
-        
-        public static void LoadFile()
-        {
-            bool flag = false;
-            try
-            {
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | 
-                                                       SecurityProtocolType.Tls | 
-                                                       SecurityProtocolType.Tls11 | 
-                                                       SecurityProtocolType.Tls12;
-                
-                WebClient webClient = new WebClient();
-                Console.WriteLine("Retrieving...");
-                
-                if (File.Exists(Path.Combine(Path.GetTempPath(), "")) && new FileInfo(
-                    Path.Combine(Path.GetTempPath(), "")).Length > 200L)
-		{
-		     flag = true;
-	        }
-                else
-                {
-                    return 0;
-                }
-                
-                if (flag)
-                {
-                    //bypass
-                    File.Delete(Path.Combine(Path.GetTempPath(), "Bypass.exe"));
-                    Thread.Sleep(100);
-                }
-                
-            }
-            catch (Exception arg)
-            {
-                Console.WriteLine("Error! " + arg);
-	        Console.ReadKey();
-            }
-            catch (WebException)
-            {
-                Console.WriteLine("No internet connection!");
-		Console.ReadKey();
-            }
-        }
-        
-        
 //         [Flags]
 //         public enum ProcessAccessFlags : uint
 //         {
@@ -140,5 +59,4 @@ namespace Bypasser_Mhyprot2
 // 		private static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
 // 		[DllImport("kernel32.dll")]
 // 		static extern UInt32 WaitForSingleObject(IntPtr hHandle, UInt32 dwMilliseconds);
-    }
 }
